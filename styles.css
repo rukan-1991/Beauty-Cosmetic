@@ -1,0 +1,478 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap');
+
+:root {
+    --colo-black: #000000;
+    --color-dark: #3e3b37;
+    --color-red: #dc143b;
+    --color-gray: #6f6f6f;
+    --color-white: #f5f5f5;
+
+    --container-with: 88%;
+
+    --transition: all 0.3s ease-in-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Sen', sans-serif;
+    background-color: var(--color-white);
+    color: var(--color-dark);
+    line-height: 1.4rem;
+    overflow-x: hidden;
+}
+
+.container {
+    margin: 0 auto;
+    width: var(--container-with);
+}
+
+a {
+    color: var(--color-white);
+    text-decoration: none;
+    transition: all var(--transition);
+}
+
+a:hover {
+    color: var(--color-red);
+}
+h1 {
+    color: var(--colo-black);
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+ul {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.btn {
+    border: 0.1rem solid var(--color-dark);
+    padding: 0.5rem;
+    color: var(--color-dark);
+}
+
+.btn:hover {
+    background-color: var(--color-red);
+    color: var(--color-white);
+    border: none;
+}
+
+/*=============Navbar================*/
+
+nav {
+    width: 100vw;
+    height: calc(16px * 5);
+    display: grid;
+    place-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background: var(--colo-black);
+    /*border-bottom: 0.2rem solid var(--color-bg-3);
+    box-shadow: 0.1rem 0.7rem var(--color-red);*/
+}
+
+.nav-container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo h2 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--color-white);
+}
+
+.nav-logo h2 span {
+    color: var(--color-red);
+    font-weight: 700;
+}
+
+.nav-logo p {
+    color: var(--color-white);
+    font-size: 0.9rem;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    transition: var(--transition);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.active, .nav-menu a:hover {
+    color: var(--color-red);
+    border-bottom: 0.1rem solid var(--color-light);
+    border-width: 0.2rem;
+}
+
+.scroll-text {
+    width: 100%;
+    height: 1.7rem;
+    margin-top: 5rem;
+    text-align: center;
+    position: fixed;
+    background-color: var(--color-red);
+    z-index: 98;
+}
+
+.scroll-text a {
+    color: var(--color-white);
+}
+
+.scroll-text span {
+    color: var(--colo-black);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+/*===============Header================*/
+
+header {
+    width: 100vw;
+    height: 95vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.header-bg {
+    width: 100%;
+    height: 100%;
+}
+
+.header-container {
+    width: 30vw;
+    margin-top: -35rem;
+    margin-left: 5rem;
+    position: relative;
+    line-height: 1.1rem;
+    color: var(--color-white);
+}
+
+.header-container h3 {
+    padding: 0.3rem;
+    font-size: 1.7rem;
+    color: var(--color-red);
+    border-bottom: 0.15rem solid var(--color-red);
+}
+
+.header-container h1 {
+    margin-top: 1.7rem;
+    color: var(--color-white);
+    text-transform: uppercase;
+    font-size: 3.8rem;
+}
+
+.header-container h2 {
+    margin-top: 1.8rem;
+    text-transform: uppercase;
+    font-size: 1.55rem;
+    text-align: center;
+    color: var(--color-white);
+}
+
+.header-container p {
+    width: 25vw;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    text-align: justify;
+    right: 3rem;
+}
+
+.header-container .btn-header {
+    color: var(--color-red);
+    border: 0.1rem solid var(--color-red);
+    transition: var(--transition);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.header-container .btn-header:hover {
+    color: var(--color-white);
+}
+
+/*===============Analytic================*/
+
+.analytic {
+    margin-top: 10rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--color-red);
+    color: var(--color-white);
+    border-radius: 0.7rem;
+}
+
+.analytic .item {
+    padding: 5rem;
+    line-height: 2rem;
+}
+
+/*===============Collection Section================*/
+.collection {
+    margin-top: 10rem;
+}
+
+.collection h1 {
+    margin-bottom: 2rem;
+}
+
+.collection table {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.collection table, tr, th {
+    padding: 0 2rem;
+    color: var(--color-red);
+    font-size: 1.2rem;
+}
+
+.collection table, tr, td {
+    padding: 0 2rem;
+    color: var(--color-dark);
+    font-size: 1rem;
+}
+
+/*===============About Section================*/
+.about-container {
+    margin-top: 10rem;
+    position: relative;
+}
+
+.about-container .left {
+    width: 50vw;
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.about-container .right {
+    width: 45vw;
+    position:absolute;
+    align-items: center;
+    top:-5rem;
+    right: 0;
+}
+
+.about-container .right .right-img {
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.about-container .right .text-item {
+    width: 25vw;
+    position: relative;
+    top: 3rem;
+    left: 12rem;
+    line-height: 1.2rem;
+}
+
+.text-item h2 {
+    padding: 1rem 0;
+}
+
+.text-item p {
+    text-align: justify;
+    margin-bottom: 3rem;
+}
+
+/*===============Brows Section================*/
+.brows-container .brows-header {
+    margin-top: 7rem;
+    width: 100%;
+}
+
+.brows-container .brows-header h1 {
+    font-size: 2.5rem;
+}
+
+.brows-container .brows-header .items {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.brows-container .brows-header .items .item {
+    padding: 1rem;
+    box-shadow: 0.1rem 0.1rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.brows-container .brows-header .items .item:hover {
+    box-shadow: none;
+}
+
+.brows-container .brows-header .items .item img {
+    border-radius: 0.5rem;
+}
+
+.brows-container .brows-header .items .item h3 {
+    margin: 1rem 0;
+    text-transform: uppercase;
+}
+
+.brows-container .brows-header .items .item p {
+    text-align: justify;
+    margin-bottom: 1.8rem;
+}
+
+.item btn {
+    margin-top: 3rem;
+}
+
+/*===============Contact================*/
+
+.contact-container {
+    margin-top: 10rem;
+    position: relative;
+}
+
+.contact-container .left {
+    width: 45vw;
+    position:relative;
+    align-items: center;
+    top:-5rem;
+    left: 0;
+    z-index: 1;
+    margin-bottom: 15rem;
+}
+
+.contact-container .left .left-img {
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.contact-container .left .text-item {
+    width: 25vw;
+    position: relative;
+    top: 3rem;
+    left: 6rem;
+    line-height: 1.2rem;
+}
+
+.text-item h2 {
+    padding: 1rem 0;
+}
+
+.text-item p {
+    text-align: justify;
+    margin-bottom: 3rem;
+}
+
+.contact-container .right {
+    width: 50vw;
+    position: absolute;
+    border-radius: 1rem;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+}
+
+/*===============Signup================*/
+
+.sign-up {
+    width: var(--container-with);
+    height: 30vh;
+    margin: 0 auto;
+    background-color: var(--color-red);
+    border-radius: 0.7rem;
+    text-align: center;
+    place-items: center;
+}
+
+.sign-up h2 {
+    padding-top: 3.5rem;
+    color: var(--color-white);
+    text-transform: capitalize;
+}
+
+.sign-form input {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    background-color: var(--color-white);
+    box-shadow: 0.1rem 0.2rem rgba(0 0 0 / 0.5);
+    font-family: 'Sen' sans-serif;
+}
+.sign-form .sign-btn {
+    background-color: var(--colo-black);
+    border: none;
+    color: var(--color-white);
+    margin-left: 0.8rem;
+    font-family: inherit;
+}
+
+.sign-form .sign-btn:hover {
+    opacity: 0.8;
+}
+
+/*===============Footer================*/
+footer {
+    margin-top: 10rem;
+    background-color: var(--colo-black);
+}
+
+footer .footer-container {
+    width: var(--container-with);
+    height: 45vh;
+    padding-top: 5rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 2rem;
+    margin: 0 auto;
+}
+
+.footer-container h1 {
+    color: var(--color-white);
+    place-items: center;
+}
+
+.footer-container h1 span {
+    margin-left: 0.5rem;
+    color: var(--color-red);
+}
+
+.footer-container p {
+    color: var(--color-white);
+    font-size: 0.8rem;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    padding: 0.7rem;
+}
